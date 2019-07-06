@@ -1,0 +1,460 @@
+:root{
+    --mainBlue:        #4bacf1;
+    --transparentBlue: rgba(64, 172, 241, .6);
+    --mainWhite:       #fff;
+    --mainlightWhite:  rgba(237, 236, 237, .6);
+    --mainBlack:       #292f36;
+    --mainGray:        rgb(216, 214, 214);
+    --mainDark:        #9a989c;
+    --mainbgDark:      #737477;
+    --mainYellow:      #eab127;
+    --transYellow:     rgba(234, 177, 39,.55);
+    --mainlightGray:   #cdcccd;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    color: var(--mainBlack);
+    background-color: var(--mainWhile);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+/*Start preloader*/
+
+.preloader{
+    width: 100%;
+    height: 100%;
+    background-color: var(--mainWhite);
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+/*    transition: all 1s ease-in-out;*/
+}
+.preloader img{
+    width: 80px;
+    z-index: 1;
+}
+.hide_preloader{
+    opacity: 0;
+    z-index: -10;
+}
+
+/*End preloader*/
+/*Start Nice Scroll*/
+.nicescroll-rails{
+    background-color: transparent;
+    
+}
+.nicescroll-cursors{
+    height: 40px!important;
+    border: none!important;
+}
+
+/*End Nice Scroll*/
+/*Start navBar*/
+.navbar-toggler{
+    border-color: var(--mainBlue) !important;
+}
+.nav-link{
+    color: var(--mainBlack);
+    text-transform: capitalize;
+}
+.social-icons .nav-link, .nav-link:hover{color: var(--mainBlue)!important;}
+.social-icons .nav-link{
+    transition-property: color;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    font-size: 1.7rem;
+}
+.social-icons .nav-link:hover{color: var(--mainBlack)!important;}
+
+/*End navBar*/
+/*Start Header Section*/
+.header{
+    color: var(--mainWhite);
+    clip-path: polygon(0 0, 100% 0,100% 90%, 50% 100%, 0 90%);
+    overflow: hidden;
+}
+.header .row{
+    background: url('../images/car-wallpaper-1-Ferrari.jpg');
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    animation-name: zoom;
+    animation-duration: 20s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+    transition: all 1s;
+}
+.header .row::after{
+    content: " ";
+    position: absolute;
+    top: 0; left: 0;
+    background-color: rgba(0,0,0,.65);
+    width: 100%;
+    height: 100vh;
+}
+@keyframes zoom{
+    0%{transform: scale(1);}
+    50%{
+        transform: scale(1.2) translateX(-5%);
+    }
+    100%{transform: scale(10;)}
+}
+.col{z-index: 5;}
+.text1{
+    background: rgba(0,0,0,.4);
+    border-left: .3rem solid var(--mainBlue);
+}
+.text2{
+    font-weight: 700;
+    font-size: 1.9rem;
+}
+.fa-play{color: var(--mainBlue);}
+.fa-play:hover{color: var(--mainBlue);opacity: .6;}
+/*End Header Section*/
+/*Start Choosen Section*/
+
+.choose h1, .choose .title-span, .inventor h1, .inventor .title-span, .feature .title-span, .about h1, .about .title-span, .gallery h1, .gallery .title-span, .services h1, .services .title-span{
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: -.04rem;
+    word-spacing: .15rem;
+}
+.choose .title-span, .inventor .title-span, .feature .title-span, .about .title-span, .gallery .title-span, .services .title-span{
+    background-color: var(--mainBlue);
+    color: var(--mainWhite);
+    padding: 0.5rem 2rem;
+    font-weight: 300;
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.choose-container i{
+    font-size: 2.7rem;
+    border-radius: 50%;
+    background-color: var(--mainGray);
+    padding: 15px;
+    color: var(--mainYellow);
+}
+.choose-container hr{
+    background-color: var(--mainBlue);
+    width: 70px;
+    height: 4px;
+    border-radius: 4px;
+    border-top: 0;
+}
+.choose-container h6{
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 20px;
+    letter-spacing: -.04rem;
+    font-size: .95rem;
+}
+
+/*End Choosen Section*/
+/*End Inventor Section*/
+
+.inventor{
+    background-color: var(--mainGray);
+}
+.inventor .categories{margin-bottom: 50px;}
+.inventor .categories .nav-pills .nav-link{
+    border: 1px solid var(--mainDark);
+    background-color: transparent;
+    color: var(--mainDark);
+    margin: 0 3px;
+    padding: -1px;
+    font-weight: 500;
+}
+.inventor .categories .nav-pills .nav-link:hover{
+    background-color: var(--mainbgDark);
+    color: var(--mainWhite)!important;
+}
+/*End of nav-pills*/
+.inventor .col-lg-4{margin-bottom: 30px;}
+.inventor .card{position: relative;}
+.inventor hr{
+    margin: 0 auto;
+    width: 100%;
+    left: 0;
+    position: absolute;
+}
+.inventor .card-text{
+    padding: 15px;
+    background-color: var(--mainlightGray);
+}
+.inventor .price{
+    padding: 5px 15px 0 15px;
+    clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
+    background-color: var(--mainBlue);
+    transition: all .7s linear;
+}
+.inventor .price:hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/*End Inventor Section*/
+/*Start Quest Section*/
+
+.quest{
+    background: url(../images/car-wallpaper-12.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.quest:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.65); 
+}
+.quest .container{
+    color: var(--mainWhite);
+}
+.quest .container i{
+    font-size: 4rem;
+    color: var(--mainBlue);
+    padding: 0 40px 0 20px;
+    transition: all .5s ease-in-out;
+}
+.quest .container i:hover{
+    transform: translateY(-10px);
+}
+.quest .container h5{
+    color: var(--mainBlack);
+    font-weight: 700;
+}
+/*.quest .container p{margin-right: 75px;}*/
+.quest .col-md-6{
+}
+.quest .quest-content1{
+    background-color: var(--transparentBlue); 
+}
+.quest .quest-content2{
+    background-color: var(--transYellow);    
+}
+
+/*End Quest Section*/
+/*Start Feature Section*/
+
+.feature{
+    background-color: var(--mainGray);
+    padding-top: 10px;
+}
+.feature .feature-img{
+    position: relative;
+}
+.feature .feature-img .img-span{
+    background-color: var(--mainlightWhite);
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+.feature .feature-img .img-span i{
+    align-self: center;
+    font-size: 2.5rem;
+    transition: all .5s ease-in-out;
+    z-index: 15;
+}
+.feature .feature-img img{
+    transition: all .8s ease-in-out;
+}
+.feature .feature-img:hover img{
+    transform: scale(1.07);
+    opacity: .5;
+}
+.feature .feature-img .img-span i:hover{
+    color: var(--mainYellow);
+    cursor: pointer;
+}
+.feature .feature-img:hover .img-span{
+    opacity: 1;
+}
+/*
+.feature .feature-img:hover img{
+    transform: scale(1.2);
+}
+*/
+.feature .feature-items i{
+    font-size: 1.7rem;
+    color: var(--mainYellow);
+    transition: all .5s ease-in-out;
+}
+.feature .feature-items{
+    background-color: var(--mainlightWhite);
+    padding: 10px 0 0 15px; 
+    border-radius: 4px;
+    margin-bottom: 15px;
+    transition: all 1s ease-in-out;
+}
+.feature .feature-items:hover{
+    transform: scale(1.07);
+    background-color: var(--mainWhite);
+    color: var(--mainBlack);
+}
+.feature .feature-items:hover i{color: var(--mainBlue);}
+
+/*End Feature Section*/
+/*Start About Section*/
+
+.about .card{
+    position: relative;
+}
+.about .card .customer{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    align-self: center;
+    border: 6px solid var(--mainWhite);
+}
+.about .card-body h5{color:  var(--mainBlue);}
+.about .card-body i{font-size: 1.7rem; color: var(--mainlightGray);}
+
+/*End About Section*/
+/*Start Gallary Section*/
+
+.gallery .gallery-hover a{
+    position: relative;
+    align-self: center;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+.gallery .gallery-hover a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--transYellow);
+    transition: all 1s ease-in-out;
+    opacity: 0;
+}
+.gallery .gallery-caption{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border: 12px solid var(--mainlightWhite);
+    box-sizing: border-box;
+    align-self: center;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    opacity: 0;
+}
+.gallery .gallery-hover a:hover .gallery-caption{
+    opacity: 1;
+    cursor: pointer;
+}
+.gallery .gallery-hover a:hover::after{
+    opacity: 1
+}
+.gallery .gallery-hover .lightbox-img{
+    transition: all 1s ease-in-out;
+}
+.gallery .gallery-hover:hover .lightbox-img{transform: scale(1.2);} 
+
+/*End Gallary Section*/
+/*End Spy Scroll*/
+
+.nav-pills .nav-link.active{
+    color: var(--mainWhite)!important;
+}
+
+/*End Spy Scroll*/
+/*Start Services Section*/
+
+/*
+.services .video-wrap{
+    position: relative;
+}
+.services .video-wrap:hover .video-layer{
+    filter: none;
+    filter: blur(.8px) brightness(.8);
+    cursor: pointer;
+    opacity: .4;
+}
+.services .video-wrap .video-layer{
+    clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+    overflow: hidden;
+    opacity: .35;
+    filter:  blur(2px) brightness(.8) sepia(30%);
+    width: 100%;
+    transition: all 1s ease-in-out;
+}
+.services .video-caption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5434465;
+    opacity: 1;
+    flex-wrap: wrap;
+}
+.services .up-lid{
+    background-color: var(--mainbgDark);
+    border-radius: 5px;
+    max-width: 35%;
+    margin-right: 10px;
+}
+.services .lid i{
+    color: var(--mainYellow);
+}
+*/
+
+/*End Services Section*/
+
+
+/*
+.block1{
+    background-color: red;
+    position: relative;
+    
+}
+.block-in{
+    background-color: blue;
+    position: absolute;
+    z-index: 15;
+    
+    width: 80%;                            
+    height: 100%;
+}
+.up-lid{
+    
+    border-radius: 5px;
+    min-width: 45%;
+}
+.lid{
+    background-color: firebrick;
+    max-width: 20%;
+    height: 30vh;
+    padding: 10px 70% 0 25px;
+    border-radius: 4px;
+    background-color: var(--mainbgDark);
+}
+.play{
+    width: 100%;
+    height: 100vh;
+}
+*/
+
+
+
+
+
+
+
+
+
